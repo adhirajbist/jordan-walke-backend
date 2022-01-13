@@ -6,4 +6,4 @@ Built with:
 * [Express](https://expressjs.com/)
 * [MongoDB](https://www.mongodb.com/)
 * [Mongoose](https://mongoosejs.com/)
-## [Click here](https://github.com/adhirajbist/jordan-walke-frontend) to view front-end
+## [Click here](https://github.com/adhirajbist/jordan-walke-frontend) to go front-end's repository
