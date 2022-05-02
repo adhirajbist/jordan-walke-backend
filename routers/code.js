@@ -40,9 +40,19 @@ router.post('/deleteupload', async (req, res) => {
     }
 })
 
-router.get('/populate', async (req, res) => {
+router.post('/changestatus', async (req, res) => {
     try{
-        const allCodes = await Code.find({});
+        await Code.updateOne({_id: req.body.codeId},{status: "approved"});
+        res.status(200).json();
+    } catch(err) {
+        console.log(err);
+    }
+})
+
+router.post('/populate', async (req, res) => {
+    try{
+        const status = (req.body.isAdmin? "submitted" : "approved")
+        const allCodes = await Code.find({status:status});
         res.status(200).json(allCodes);
     } catch(err) {
         console.log(err);
